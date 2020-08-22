@@ -1,12 +1,14 @@
 //
-//  UIFont+AddTraits.swift
-//  MarkdownViewSwift
+//  UIFont+Extensions.swift
+//  LemonTree
 //
-//  Created by Kevin Johnson on 9/19/19.
-//  Copyright © 2019 Kevin Johnson. All rights reserved.
+//  Created by Kevin Johnson on 8/22/20.
+//  Copyright © 2020 Kevin Johnson. All rights reserved.
 //
 
 import UIKit
+
+// MARK: - Add Traits
 
 extension UIFont {
     func boldFont(fontSize: CGFloat, textStyle: UIFont.TextStyle) -> UIFont? {
@@ -23,5 +25,19 @@ extension UIFont {
             return nil
         }
         return UIFont(descriptor: descriptor, size: self.pointSize).scaledFont(for: textStyle)
+    }
+}
+
+// MARK: - Accessibility
+
+extension UIFont {
+    func scaledFont(for textStyle: UIFont.TextStyle) -> UIFont {
+        return textStyle.fontMetrics.scaledFont(for: self)
+    }
+}
+
+extension UIFont.TextStyle {
+    var fontMetrics: UIFontMetrics {
+        return UIFontMetrics(forTextStyle: self)
     }
 }

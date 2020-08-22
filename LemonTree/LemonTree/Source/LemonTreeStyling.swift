@@ -1,5 +1,5 @@
 //
-//  MarkdownStyling.swift
+//  LemonTreeStyling.swift
 //  LemonTree
 //
 //  Created by Kevin Johnson on 8/21/20.
@@ -7,13 +7,13 @@
 //
 import UIKit
 
-/// Good way 2 modify.. shared update etc
-struct MarkdownStyling {
-    static var heading1Font: UIFont = UIFont.systemFont(ofSize: 28, weight: .regular) // .bold
+// TODO: Good way 2 modify.. shared update etc
+struct LemonTreeStyling {
+    static var heading1Font: UIFont = UIFont.systemFont(ofSize: 28, weight: .bold)
     static var heading1TextStyle: UIFont.TextStyle = .title1
     static var heading1TextColor: UIColor = .label
     
-    static var heading2Font: UIFont = UIFont.systemFont(ofSize: 22, weight: .regular) // .bold
+    static var heading2Font: UIFont = UIFont.systemFont(ofSize: 22, weight: .bold)
     static var heading2TextStyle: UIFont.TextStyle = .title2
     static var heading2TextColor: UIColor = .label
     
@@ -36,28 +36,29 @@ struct MarkdownStyling {
     static var bodyFont: UIFont = UIFont.systemFont(ofSize: 17, weight: .regular)
     static var bodyTextStyle: UIFont.TextStyle = .body
     static var bodyTextColor: UIColor = .label
-    
-    static var inlineCodeFont: UIFont = UIFont.systemFont(ofSize: 15, weight: .light)
+
+    // TODO: need to inset a little bet, space between text and background
+    static var inlineCodeFont: UIFont = UIFont.monospacedSystemFont(ofSize: 15, weight: .light)
     static var inlineCodeTextStyle: UIFont.TextStyle = .body
     static var inlineCodeTextColor: UIColor = .systemGray3
     static var inlineCodeBackgroundColor: UIColor = .systemGray6
 }
 
-extension MarkdownStyling {
+extension LemonTreeStyling {
     static func headingFont(for level: Int) -> UIFont {
         switch level {
         case 1:
-            return MarkdownStyling.heading1Font
+            return LemonTreeStyling.heading1Font
         case 2:
-            return MarkdownStyling.heading2Font
+            return LemonTreeStyling.heading2Font
         case 3:
-            return MarkdownStyling.heading3Font
+            return LemonTreeStyling.heading3Font
         case 4:
-            return MarkdownStyling.heading4Font
+            return LemonTreeStyling.heading4Font
         case 5:
-            return MarkdownStyling.heading5Font
+            return LemonTreeStyling.heading5Font
         case 6:
-            return MarkdownStyling.heading6Font
+            return LemonTreeStyling.heading6Font
         default:
             preconditionFailure()
         }
@@ -66,17 +67,17 @@ extension MarkdownStyling {
     static func headingTextStyle(for level: Int) -> UIFont.TextStyle {
         switch level {
         case 1:
-            return MarkdownStyling.heading1TextStyle
+            return LemonTreeStyling.heading1TextStyle
         case 2:
-            return MarkdownStyling.heading2TextStyle
+            return LemonTreeStyling.heading2TextStyle
         case 3:
-            return MarkdownStyling.heading3TextStyle
+            return LemonTreeStyling.heading3TextStyle
         case 4:
-            return MarkdownStyling.heading4TextStyle
+            return LemonTreeStyling.heading4TextStyle
         case 5:
-            return MarkdownStyling.heading5TextStyle
+            return LemonTreeStyling.heading5TextStyle
         case 6:
-            return MarkdownStyling.heading6TextStyle
+            return LemonTreeStyling.heading6TextStyle
         default:
             preconditionFailure()
         }
@@ -85,17 +86,17 @@ extension MarkdownStyling {
     static func headingTextColor(for level: Int) -> UIColor {
         switch level {
         case 1:
-            return MarkdownStyling.heading1TextColor
+            return LemonTreeStyling.heading1TextColor
         case 2:
-            return MarkdownStyling.heading2TextColor
+            return LemonTreeStyling.heading2TextColor
         case 3:
-            return MarkdownStyling.heading3TextColor
+            return LemonTreeStyling.heading3TextColor
         case 4:
-            return MarkdownStyling.heading4TextColor
+            return LemonTreeStyling.heading4TextColor
         case 5:
-            return MarkdownStyling.heading5TextColor
+            return LemonTreeStyling.heading5TextColor
         case 6:
-            return MarkdownStyling.heading6TextColor
+            return LemonTreeStyling.heading6TextColor
         default:
             preconditionFailure()
         }

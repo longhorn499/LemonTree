@@ -7,26 +7,31 @@
 //
 
 import UIKit
+import CommonMark
 
 class ViewController: UIViewController {
 
-    // wrap in scrollView
     @IBOutlet weak var contentView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tree = LemonTree()
-        let document = try! tree.test()
-        let lemonViewFactory = LemonTreeViewFactory(document)
-        let lemonView = lemonViewFactory.generate()
-        lemonView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(lemonView)
-        NSLayoutConstraint.activate([
-            lemonView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            lemonView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            lemonView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            lemonView.topAnchor.constraint(equalTo: contentView.topAnchor)
-        ])
+        do {
+            let url = Bundle.main.url(forResource: "test", withExtension: "md")!
+            let data = try Data(contentsOf: url)
+            let string = String(data: data, encoding: .utf8) ?? "missing"
+            let document = try Document(string)
+            let lemonView = try LemonTree.generateView(for: document)
+            lemonView.translatesAutoresizingMaskIntoConstraints = false
+            contentView.addSubview(lemonView)
+            NSLayoutConstraint.activate([
+                lemonView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+                lemonView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+                lemonView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+                lemonView.topAnchor.constraint(equalTo: contentView.topAnchor)
+            ])
+        } catch {
+            print("Error loading test markdown: \(error)")
+        }
     }
 }

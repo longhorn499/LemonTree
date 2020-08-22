@@ -15,18 +15,16 @@
 		52C2D66324F0414600FE35C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C2D66124F0414600FE35C5 /* LaunchScreen.storyboard */; };
 		52C2D66E24F0414600FE35C5 /* LemonTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2D66D24F0414600FE35C5 /* LemonTreeTests.swift */; };
 		52C2D67D24F041F600FE35C5 /* LemonTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2D67C24F041F600FE35C5 /* LemonTree.swift */; };
-		52C2D67F24F0420500FE35C5 /* LemonTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2D67E24F0420500FE35C5 /* LemonTreeView.swift */; };
 		52C2D68124F0428900FE35C5 /* test.md in Resources */ = {isa = PBXBuildFile; fileRef = 52C2D68024F0428900FE35C5 /* test.md */; };
 		52C376C724F18B7900FC0EF7 /* CommonMark in Frameworks */ = {isa = PBXBuildFile; productRef = 52C376C624F18B7900FC0EF7 /* CommonMark */; };
 		52C376C924F18B7900FC0EF7 /* CommonMarkBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = 52C376C824F18B7900FC0EF7 /* CommonMarkBuilder */; };
 		52C376CB24F18BE500FC0EF7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 52C376CA24F18BE500FC0EF7 /* README.md */; };
-		52C376D124F193F300FC0EF7 /* UIFont+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376CD24F193F300FC0EF7 /* UIFont+Accessibility.swift */; };
-		52C376D224F193F300FC0EF7 /* UIFont+AddTraits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376CE24F193F300FC0EF7 /* UIFont+AddTraits.swift */; };
-		52C376D424F193F300FC0EF7 /* MarkdownStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376D024F193F300FC0EF7 /* MarkdownStyling.swift */; };
+		52C376D224F193F300FC0EF7 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376CE24F193F300FC0EF7 /* UIFont+Extensions.swift */; };
+		52C376D424F193F300FC0EF7 /* LemonTreeStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376D024F193F300FC0EF7 /* LemonTreeStyling.swift */; };
 		52C376D724F19D3C00FC0EF7 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376D624F19D3C00FC0EF7 /* UIStackView+Extensions.swift */; };
 		52C376D924F1A4BE00FC0EF7 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376D824F1A4BE00FC0EF7 /* Array+Extensions.swift */; };
 		52C376DB24F1A4D700FC0EF7 /* Node+AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376DA24F1A4D700FC0EF7 /* Node+AttributedString.swift */; };
-		52C376DD24F1A6BE00FC0EF7 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376DC24F1A6BD00FC0EF7 /* URL+Extensions.swift */; };
+		52C376DF24F1B5E400FC0EF7 /* LemonTreeViewRenderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376DE24F1B5E400FC0EF7 /* LemonTreeViewRenderable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,16 +50,14 @@
 		52C2D66D24F0414600FE35C5 /* LemonTreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonTreeTests.swift; sourceTree = "<group>"; };
 		52C2D66F24F0414600FE35C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52C2D67C24F041F600FE35C5 /* LemonTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonTree.swift; sourceTree = "<group>"; };
-		52C2D67E24F0420500FE35C5 /* LemonTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonTreeView.swift; sourceTree = "<group>"; };
 		52C2D68024F0428900FE35C5 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
 		52C376CA24F18BE500FC0EF7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		52C376CD24F193F300FC0EF7 /* UIFont+Accessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Accessibility.swift"; sourceTree = "<group>"; };
-		52C376CE24F193F300FC0EF7 /* UIFont+AddTraits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+AddTraits.swift"; sourceTree = "<group>"; };
-		52C376D024F193F300FC0EF7 /* MarkdownStyling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownStyling.swift; sourceTree = "<group>"; };
+		52C376CE24F193F300FC0EF7 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		52C376D024F193F300FC0EF7 /* LemonTreeStyling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LemonTreeStyling.swift; sourceTree = "<group>"; };
 		52C376D624F19D3C00FC0EF7 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
 		52C376D824F1A4BE00FC0EF7 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		52C376DA24F1A4D700FC0EF7 /* Node+AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Node+AttributedString.swift"; sourceTree = "<group>"; };
-		52C376DC24F1A6BD00FC0EF7 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		52C376DE24F1B5E400FC0EF7 /* LemonTreeViewRenderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonTreeViewRenderable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +122,9 @@
 			children = (
 				52C376D524F193FB00FC0EF7 /* Extensions */,
 				52C2D67C24F041F600FE35C5 /* LemonTree.swift */,
-				52C2D67E24F0420500FE35C5 /* LemonTreeView.swift */,
-				52C376D024F193F300FC0EF7 /* MarkdownStyling.swift */,
+				52C376D024F193F300FC0EF7 /* LemonTreeStyling.swift */,
+				52C376DE24F1B5E400FC0EF7 /* LemonTreeViewRenderable.swift */,
 				52C376DA24F1A4D700FC0EF7 /* Node+AttributedString.swift */,
-				52C2D68024F0428900FE35C5 /* test.md */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -137,6 +132,7 @@
 		52C376CC24F18E8900FC0EF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				52C2D68024F0428900FE35C5 /* test.md */,
 				52C2D65624F0414600FE35C5 /* AppDelegate.swift */,
 				52C2D65F24F0414600FE35C5 /* Assets.xcassets */,
 				52C2D66424F0414600FE35C5 /* Info.plist */,
@@ -152,10 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				52C376D824F1A4BE00FC0EF7 /* Array+Extensions.swift */,
-				52C376CD24F193F300FC0EF7 /* UIFont+Accessibility.swift */,
-				52C376CE24F193F300FC0EF7 /* UIFont+AddTraits.swift */,
+				52C376CE24F193F300FC0EF7 /* UIFont+Extensions.swift */,
 				52C376D624F19D3C00FC0EF7 /* UIStackView+Extensions.swift */,
-				52C376DC24F1A6BD00FC0EF7 /* URL+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,17 +265,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				52C376D724F19D3C00FC0EF7 /* UIStackView+Extensions.swift in Sources */,
-				52C376DD24F1A6BE00FC0EF7 /* URL+Extensions.swift in Sources */,
 				52C376D924F1A4BE00FC0EF7 /* Array+Extensions.swift in Sources */,
 				52C376DB24F1A4D700FC0EF7 /* Node+AttributedString.swift in Sources */,
 				52C2D65B24F0414600FE35C5 /* ViewController.swift in Sources */,
 				52C2D67D24F041F600FE35C5 /* LemonTree.swift in Sources */,
 				52C2D65724F0414600FE35C5 /* AppDelegate.swift in Sources */,
-				52C376D124F193F300FC0EF7 /* UIFont+Accessibility.swift in Sources */,
 				52C2D65924F0414600FE35C5 /* SceneDelegate.swift in Sources */,
-				52C376D224F193F300FC0EF7 /* UIFont+AddTraits.swift in Sources */,
-				52C2D67F24F0420500FE35C5 /* LemonTreeView.swift in Sources */,
-				52C376D424F193F300FC0EF7 /* MarkdownStyling.swift in Sources */,
+				52C376D224F193F300FC0EF7 /* UIFont+Extensions.swift in Sources */,
+				52C376DF24F1B5E400FC0EF7 /* LemonTreeViewRenderable.swift in Sources */,
+				52C376D424F193F300FC0EF7 /* LemonTreeStyling.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
