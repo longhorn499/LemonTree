@@ -13,7 +13,7 @@ Display Markdown using UIKit views, not webviews 🍋
 
 ## Unsupported
 
-- [  ] Images
+- [ ] Images
 
 # Installation
 
