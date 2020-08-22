@@ -14,10 +14,19 @@
 		52C2D66024F0414600FE35C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C2D65F24F0414600FE35C5 /* Assets.xcassets */; };
 		52C2D66324F0414600FE35C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C2D66124F0414600FE35C5 /* LaunchScreen.storyboard */; };
 		52C2D66E24F0414600FE35C5 /* LemonTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2D66D24F0414600FE35C5 /* LemonTreeTests.swift */; };
-		52C2D67A24F041C400FE35C5 /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = 52C2D67924F041C400FE35C5 /* Down */; };
 		52C2D67D24F041F600FE35C5 /* LemonTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2D67C24F041F600FE35C5 /* LemonTree.swift */; };
 		52C2D67F24F0420500FE35C5 /* LemonTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2D67E24F0420500FE35C5 /* LemonTreeView.swift */; };
 		52C2D68124F0428900FE35C5 /* test.md in Resources */ = {isa = PBXBuildFile; fileRef = 52C2D68024F0428900FE35C5 /* test.md */; };
+		52C376C724F18B7900FC0EF7 /* CommonMark in Frameworks */ = {isa = PBXBuildFile; productRef = 52C376C624F18B7900FC0EF7 /* CommonMark */; };
+		52C376C924F18B7900FC0EF7 /* CommonMarkBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = 52C376C824F18B7900FC0EF7 /* CommonMarkBuilder */; };
+		52C376CB24F18BE500FC0EF7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 52C376CA24F18BE500FC0EF7 /* README.md */; };
+		52C376D124F193F300FC0EF7 /* UIFont+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376CD24F193F300FC0EF7 /* UIFont+Accessibility.swift */; };
+		52C376D224F193F300FC0EF7 /* UIFont+AddTraits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376CE24F193F300FC0EF7 /* UIFont+AddTraits.swift */; };
+		52C376D424F193F300FC0EF7 /* MarkdownStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376D024F193F300FC0EF7 /* MarkdownStyling.swift */; };
+		52C376D724F19D3C00FC0EF7 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376D624F19D3C00FC0EF7 /* UIStackView+Extensions.swift */; };
+		52C376D924F1A4BE00FC0EF7 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376D824F1A4BE00FC0EF7 /* Array+Extensions.swift */; };
+		52C376DB24F1A4D700FC0EF7 /* Node+AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376DA24F1A4D700FC0EF7 /* Node+AttributedString.swift */; };
+		52C376DD24F1A6BE00FC0EF7 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C376DC24F1A6BD00FC0EF7 /* URL+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +54,14 @@
 		52C2D67C24F041F600FE35C5 /* LemonTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonTree.swift; sourceTree = "<group>"; };
 		52C2D67E24F0420500FE35C5 /* LemonTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonTreeView.swift; sourceTree = "<group>"; };
 		52C2D68024F0428900FE35C5 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
+		52C376CA24F18BE500FC0EF7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		52C376CD24F193F300FC0EF7 /* UIFont+Accessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Accessibility.swift"; sourceTree = "<group>"; };
+		52C376CE24F193F300FC0EF7 /* UIFont+AddTraits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+AddTraits.swift"; sourceTree = "<group>"; };
+		52C376D024F193F300FC0EF7 /* MarkdownStyling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownStyling.swift; sourceTree = "<group>"; };
+		52C376D624F19D3C00FC0EF7 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		52C376D824F1A4BE00FC0EF7 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		52C376DA24F1A4D700FC0EF7 /* Node+AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Node+AttributedString.swift"; sourceTree = "<group>"; };
+		52C376DC24F1A6BD00FC0EF7 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52C2D67A24F041C400FE35C5 /* Down in Frameworks */,
+				52C376C924F18B7900FC0EF7 /* CommonMarkBuilder in Frameworks */,
+				52C376C724F18B7900FC0EF7 /* CommonMark in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +87,7 @@
 		52C2D64A24F0414600FE35C5 = {
 			isa = PBXGroup;
 			children = (
+				52C376CA24F18BE500FC0EF7 /* README.md */,
 				52C2D65524F0414600FE35C5 /* LemonTree */,
 				52C2D66C24F0414600FE35C5 /* LemonTreeTests */,
 				52C2D65424F0414600FE35C5 /* Products */,
@@ -87,14 +106,8 @@
 		52C2D65524F0414600FE35C5 /* LemonTree */ = {
 			isa = PBXGroup;
 			children = (
-				52C2D65624F0414600FE35C5 /* AppDelegate.swift */,
-				52C2D65F24F0414600FE35C5 /* Assets.xcassets */,
-				52C2D66424F0414600FE35C5 /* Info.plist */,
-				52C2D66124F0414600FE35C5 /* LaunchScreen.storyboard */,
-				52C2D65C24F0414600FE35C5 /* Main.storyboard */,
-				52C2D65824F0414600FE35C5 /* SceneDelegate.swift */,
 				52C2D67B24F041DF00FE35C5 /* Source */,
-				52C2D65A24F0414600FE35C5 /* ViewController.swift */,
+				52C376CC24F18E8900FC0EF7 /* Supporting Files */,
 			);
 			path = LemonTree;
 			sourceTree = "<group>";
@@ -111,11 +124,40 @@
 		52C2D67B24F041DF00FE35C5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				52C376D524F193FB00FC0EF7 /* Extensions */,
 				52C2D67C24F041F600FE35C5 /* LemonTree.swift */,
 				52C2D67E24F0420500FE35C5 /* LemonTreeView.swift */,
+				52C376D024F193F300FC0EF7 /* MarkdownStyling.swift */,
+				52C376DA24F1A4D700FC0EF7 /* Node+AttributedString.swift */,
 				52C2D68024F0428900FE35C5 /* test.md */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		52C376CC24F18E8900FC0EF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52C2D65624F0414600FE35C5 /* AppDelegate.swift */,
+				52C2D65F24F0414600FE35C5 /* Assets.xcassets */,
+				52C2D66424F0414600FE35C5 /* Info.plist */,
+				52C2D66124F0414600FE35C5 /* LaunchScreen.storyboard */,
+				52C2D65C24F0414600FE35C5 /* Main.storyboard */,
+				52C2D65824F0414600FE35C5 /* SceneDelegate.swift */,
+				52C2D65A24F0414600FE35C5 /* ViewController.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52C376D524F193FB00FC0EF7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52C376D824F1A4BE00FC0EF7 /* Array+Extensions.swift */,
+				52C376CD24F193F300FC0EF7 /* UIFont+Accessibility.swift */,
+				52C376CE24F193F300FC0EF7 /* UIFont+AddTraits.swift */,
+				52C376D624F19D3C00FC0EF7 /* UIStackView+Extensions.swift */,
+				52C376DC24F1A6BD00FC0EF7 /* URL+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +177,8 @@
 			);
 			name = LemonTree;
 			packageProductDependencies = (
-				52C2D67924F041C400FE35C5 /* Down */,
+				52C376C624F18B7900FC0EF7 /* CommonMark */,
+				52C376C824F18B7900FC0EF7 /* CommonMarkBuilder */,
 			);
 			productName = LemonTree;
 			productReference = 52C2D65324F0414600FE35C5 /* LemonTree.app */;
@@ -188,7 +231,7 @@
 			);
 			mainGroup = 52C2D64A24F0414600FE35C5;
 			packageReferences = (
-				52C2D67824F041C400FE35C5 /* XCRemoteSwiftPackageReference "Down" */,
+				52C376C524F18B7900FC0EF7 /* XCRemoteSwiftPackageReference "CommonMark" */,
 			);
 			productRefGroup = 52C2D65424F0414600FE35C5 /* Products */;
 			projectDirPath = "";
@@ -207,6 +250,7 @@
 			files = (
 				52C2D66324F0414600FE35C5 /* LaunchScreen.storyboard in Resources */,
 				52C2D66024F0414600FE35C5 /* Assets.xcassets in Resources */,
+				52C376CB24F18BE500FC0EF7 /* README.md in Resources */,
 				52C2D68124F0428900FE35C5 /* test.md in Resources */,
 				52C2D65E24F0414600FE35C5 /* Main.storyboard in Resources */,
 			);
@@ -226,11 +270,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C376D724F19D3C00FC0EF7 /* UIStackView+Extensions.swift in Sources */,
+				52C376DD24F1A6BE00FC0EF7 /* URL+Extensions.swift in Sources */,
+				52C376D924F1A4BE00FC0EF7 /* Array+Extensions.swift in Sources */,
+				52C376DB24F1A4D700FC0EF7 /* Node+AttributedString.swift in Sources */,
 				52C2D65B24F0414600FE35C5 /* ViewController.swift in Sources */,
 				52C2D67D24F041F600FE35C5 /* LemonTree.swift in Sources */,
 				52C2D65724F0414600FE35C5 /* AppDelegate.swift in Sources */,
+				52C376D124F193F300FC0EF7 /* UIFont+Accessibility.swift in Sources */,
 				52C2D65924F0414600FE35C5 /* SceneDelegate.swift in Sources */,
+				52C376D224F193F300FC0EF7 /* UIFont+AddTraits.swift in Sources */,
 				52C2D67F24F0420500FE35C5 /* LemonTreeView.swift in Sources */,
+				52C376D424F193F300FC0EF7 /* MarkdownStyling.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,7 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6XFU66KA9;
-				INFOPLIST_FILE = LemonTree/Info.plist;
+				INFOPLIST_FILE = "LemonTree/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,7 +461,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6XFU66KA9;
-				INFOPLIST_FILE = LemonTree/Info.plist;
+				INFOPLIST_FILE = "LemonTree/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,21 +550,26 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		52C2D67824F041C400FE35C5 /* XCRemoteSwiftPackageReference "Down" */ = {
+		52C376C524F18B7900FC0EF7 /* XCRemoteSwiftPackageReference "CommonMark" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/iwasrobbed/Down";
+			repositoryURL = "https://github.com/SwiftDocOrg/CommonMark";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.3;
+				minimumVersion = 0.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		52C2D67924F041C400FE35C5 /* Down */ = {
+		52C376C624F18B7900FC0EF7 /* CommonMark */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 52C2D67824F041C400FE35C5 /* XCRemoteSwiftPackageReference "Down" */;
-			productName = Down;
+			package = 52C376C524F18B7900FC0EF7 /* XCRemoteSwiftPackageReference "CommonMark" */;
+			productName = CommonMark;
+		};
+		52C376C824F18B7900FC0EF7 /* CommonMarkBuilder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52C376C524F18B7900FC0EF7 /* XCRemoteSwiftPackageReference "CommonMark" */;
+			productName = CommonMarkBuilder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,8 +1,8 @@
-# DoomFireSwift
+# DoomFireSwift 
 
 ![Screenshot](https://github.com/longhorn499/DoomFireSwift/raw/master/fire.gif)  
 
-## :fire: :fire: :fire:
+## :fire: :fire: :fire: _italic **italic and bold**_
 
 This is a re-creation of the Doom Fire effect for PSX using Fabien Sanglard's excellent article on how it was done: [HOW DOOM FIRE WAS DONE](http://fabiensanglard.net/doom_fire_psx/index.html)
 

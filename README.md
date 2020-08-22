@@ -2,6 +2,19 @@
 
 Display Markdown using UIKit views, not webviews 🍋
 
+# WHY
+
+# Status
+
+## Supported
+
+- [x] Headers
+
+
+## Unsupported
+
+- [  ] Images
+
 # Installation
 
 (SPM + CocoaPods)
@@ -16,9 +29,13 @@ Display Markdown using UIKit views, not webviews 🍋
 
 # Credit
 
-[Parma](https://github.com/dasautoooo/Parma) - thank you for the inspo. I thought this was a good idea but got hung up trying to do Markdown AST generation myself, when I really just cared about the final step (displaying Markdown beautifully in native views).
+[Parma](https://github.com/dasautoooo/Parma) - thank you for the inspo. I thought this was a good idea but got hung up trying to do Markdown AST generation myself when I really just cared about the final step (displaying Markdown beautifully in native views).
 
-[Down](https://github.com/iwasrobbed/Down) - generates the AST for rendering
+[SwiftDocOrg/CommonMark](https://github.com/SwiftDocOrg/CommonMark) - generates the Markdown document/structure to render
+
+++ that MarkdownParser that did AST generation..
+
+https://github.com/mattt/CommonMarkAttributedString/blob/master/Sources/CommonMarkAttributedString/CommonMark%2BExtensions.swift
 
 # Name
 
