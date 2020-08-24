@@ -6,12 +6,13 @@ import PackageDescription
 let package = Package(
     name: "LemonTree",
     platforms: [
-        .iOS("13.6")
+        .iOS(.v13)
     ],
     products: [
         .library(
             name: "LemonTree",
-            targets: ["LemonTree"]),
+            targets: ["LemonTree"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/SwiftDocOrg/CommonMark", from: "0.4.0")
@@ -19,9 +20,12 @@ let package = Package(
     targets: [
         .target(
             name: "LemonTree",
-            dependencies: ["CommonMark"]),
+            dependencies: ["CommonMark"],
+            path: "./Sources"
+        ),
         .testTarget(
             name: "LemonTreeTests",
-            dependencies: ["LemonTree"]),
+            dependencies: ["LemonTree"]
+        ),
     ]
 )

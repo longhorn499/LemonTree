@@ -38,13 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5273E79324F4480500261FAE /* LemonTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LemonTree.swift; path = ../../../LemonTree/Sources/LemonTree/LemonTree.swift; sourceTree = "<group>"; };
-		5273E79424F4480500261FAE /* LemonTreeStyling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LemonTreeStyling.swift; path = ../../../LemonTree/Sources/LemonTree/LemonTreeStyling.swift; sourceTree = "<group>"; };
-		5273E79524F4480500261FAE /* LemonTreeViewRenderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LemonTreeViewRenderable.swift; path = ../../../LemonTree/Sources/LemonTree/LemonTreeViewRenderable.swift; sourceTree = "<group>"; };
-		5273E79A24F4480500261FAE /* Node+AttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Node+AttributedString.swift"; path = "../../../LemonTree/Sources/LemonTree/Node+AttributedString.swift"; sourceTree = "<group>"; };
-		5273E7A424F4486700261FAE /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIStackView+Extensions.swift"; path = "../../../LemonTree/Sources/LemonTree/Extensions/UIStackView+Extensions.swift"; sourceTree = "<group>"; };
-		5273E7A524F4486700261FAE /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+Extensions.swift"; path = "../../../LemonTree/Sources/LemonTree/Extensions/Array+Extensions.swift"; sourceTree = "<group>"; };
-		5273E7A624F4486700261FAE /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIFont+Extensions.swift"; path = "../../../LemonTree/Sources/LemonTree/Extensions/UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		5273E79324F4480500261FAE /* LemonTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LemonTree.swift; path = ../../../Sources/LemonTree/LemonTree.swift; sourceTree = "<group>"; };
+		5273E79424F4480500261FAE /* LemonTreeStyling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LemonTreeStyling.swift; path = ../../../Sources/LemonTree/LemonTreeStyling.swift; sourceTree = "<group>"; };
+		5273E79524F4480500261FAE /* LemonTreeViewRenderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LemonTreeViewRenderable.swift; path = ../../../Sources/LemonTree/LemonTreeViewRenderable.swift; sourceTree = "<group>"; };
+		5273E79A24F4480500261FAE /* Node+AttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Node+AttributedString.swift"; path = "../../../Sources/LemonTree/Node+AttributedString.swift"; sourceTree = "<group>"; };
+		5273E7A424F4486700261FAE /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIStackView+Extensions.swift"; path = "../../../Sources/LemonTree/Extensions/UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		5273E7A524F4486700261FAE /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+Extensions.swift"; path = "../../../Sources/LemonTree/Extensions/Array+Extensions.swift"; sourceTree = "<group>"; };
+		5273E7A624F4486700261FAE /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIFont+Extensions.swift"; path = "../../../Sources/LemonTree/Extensions/UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		52C2D65324F0414600FE35C5 /* LemonTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LemonTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C2D65624F0414600FE35C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52C2D65824F0414600FE35C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,12 +121,12 @@
 			isa = PBXGroup;
 			children = (
 				5273E7A524F4486700261FAE /* Array+Extensions.swift */,
-				5273E7A624F4486700261FAE /* UIFont+Extensions.swift */,
-				5273E7A424F4486700261FAE /* UIStackView+Extensions.swift */,
 				5273E79324F4480500261FAE /* LemonTree.swift */,
 				5273E79424F4480500261FAE /* LemonTreeStyling.swift */,
 				5273E79524F4480500261FAE /* LemonTreeViewRenderable.swift */,
 				5273E79A24F4480500261FAE /* Node+AttributedString.swift */,
+				5273E7A624F4486700261FAE /* UIFont+Extensions.swift */,
+				5273E7A424F4486700261FAE /* UIStackView+Extensions.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
