@@ -2,13 +2,11 @@
 
 Display Markdown using `UIKit` 🍋
 
-**SCREENSHOT**
-
 # WHY?
 
-This can potentially be nice and provide more configuration options than presenting Markdown in a webview or with one attributed string.
+This can potentially provide more configuration options than presenting Markdown in a webview or with one attributed string.
 
-By using `UIStackView` to construct a Markdown "view", there are situations where you can add a `UIView` with a configured spacer height (ex: GitHub Markdown does this after H1 and H2 headers), create a custom `UIView` for displaying code blocks, or insert a `UIImageView` for inline images, and again provide some opportunity for customization using `UIKit`.
+By using `UIStackView` to build a Markdown view, there are situations where you could: add a `UIView` with a configured spacer height (ex: GitHub Markdown does this after H1 and H2 headers), create a custom `UIView` for displaying your code blocks, or insert a `UIImageView` for inline images, and find opportunities for customization using `UIKit`.
 
 # Usage
 
@@ -19,10 +17,6 @@ By using `UIStackView` to construct a Markdown "view", there are situations wher
   let lemonView: UIView = try LemonTree.generateView(for: document, styling: styling)
 ```
 
-# Supported Platforms
-
-* iOS 13.6+
-
 # Markdown
 
 ## Supported
@@ -31,24 +25,27 @@ By using `UIStackView` to construct a Markdown "view", there are situations wher
 - [x] Inline Code
 - [x] Links (openable)
 - [x] _Emphasis_, __Strong__
-- [x] Bulleted Lists
+- [x] Lists (bulleted and ordered)
 - [x] Ordered Lists
 - [x] Images (local)
 
 ### Platforms
 
-- [ ] iOS 13.6
+- [x] iOS 13.0+
+- [ ] macOS
 
 ## Next
 
 - [ ] Block quotes
-- [ ] Remote images (and gifs)
+- [ ] Multi-level lists
 - [ ] Code blocks
+- [ ] Remote images (and gifs)
 
 ## Unsupported
 
 - [ ] HTML
-+ a few more that aren't listed
+
+.. and a few more that aren't listed
 
 # Installation
 

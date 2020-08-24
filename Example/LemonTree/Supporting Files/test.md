@@ -1,59 +1,52 @@
-# LemonTree
+# Markdown syntax guide
 
-Display Markdown using UIKit views 🍋
+## Headers
 
-# WHY?
+# This is a Heading h1
+## This is a Heading h2 
+###### This is a Heading h6
 
-This can potentially be nice and provide more configuration/customization options in a simpler way than presenting Markdown in webview or with one attributed string. 
+## Emphasis
 
-By using `UIStackView` and constructing the Markdown view this way, there are situations where you can add a `UIView` with a configured spacer height (ex: GitHub Markdown does this for H1 and H2 headesrs), or insert a `UIImageView` for inline images, create a custom `UIView` for displaying code blocks, and provide some customization/styling using `UIKit`.
+*This text will be italic*  
+_This will also be italic_
 
-# Usage
+**This text will be bold**  
+__This will also be bold__
 
-```swift
-  let string = "I am some **Markdown** _text_ right here"
-  let document = try Document(string)
-  let styling = LemonTreeStyling() // configurable
-  let lemonView: UIView = try LemonTree.generateView(for: document, styling: styling)
-```
+_You **can** combine them_
 
-# Markdown
+## Lists
 
-## Supported
+### Unordered
 
-- [x] Headings
-- [x] Inline Code
-- [x] Links (openable)
-- [x] _Emphasis_, __Strong__
-- [x] Bulleted Lists
-- [x] Ordered Lists
-- [x] Images (local)
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
 
-### Platforms
+### Ordered
 
-- [x] iOS 13.0+
-- [ ] macOS
+1. Item 1
+1. Item 2
+1. Item 3
+   1. Item 3a
+   1. Item 3b
 
-## Next
+## Images
 
-- [ ] Block quotes
-- [ ] Remote images (and gifs)
-- [ ] Code blocks +
+![This is a alt text.](test "This is a sample image.")
 
-## Unsupported
+## Links
 
-- [ ] HTML
+You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
 
-.. and a few more that aren't listed
+## Blockquotes
 
-# Installation
+> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
+>
+>> Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
 
-Use the URL from this repository to add using Swift Package Manager 
+## Inline code
 
-# Credit
-
-[CommonMark](https://github.com/SwiftDocOrg/CommonMark) - generates the Markdown Document for rendering
-
-[CommonMarkAttributedString](https://github.com/mattt/CommonMarkAttributedString) - the logic for generating attributed strings for nodes (especially this [file](https://github.com/mattt/CommonMarkAttributedString/blob/master/Sources/CommonMarkAttributedString/CommonMark%2BExtensions.swift))
-
-[Parma](https://github.com/dasautoooo/Parma) - thank you for the inspo. I thought this was a fun/maybe good idea but got hung up trying to do some of the work unrelated to the final step.
+This web site is using `markedjs/marked`.
