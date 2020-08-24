@@ -11,17 +11,21 @@ import UIKit
 import CommonMark
 
 class LemonTree {
-    static func generateView(for document: Document) throws -> UIView {
+    static func generateView(
+        for document: Document,
+        styling: LemonTreeStyling = LemonTreeStyling(),
+        layoutMargins: UIEdgeInsets = .init(top: 20, left: 20, bottom: 20, right: 20)
+    ) throws -> UIView {
         let main = UIStackView()
         main.axis = .vertical
         main.backgroundColor = .systemFill
         main.isLayoutMarginsRelativeArrangement = true
-        main.layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20) // configurable? pass as arg?
+        main.layoutMargins = layoutMargins
         main.spacing = UIStackView.spacingUseSystem
         for child in document.children {
             switch child {
             case let renderable as LemonTreeViewRenderable:
-                main.addArrangedSubviews(renderable.markdownViews())
+                main.addArrangedSubviews(renderable.markdownViews(styling: styling))
             default:
                 print("Unhandled:", child.description)
             }

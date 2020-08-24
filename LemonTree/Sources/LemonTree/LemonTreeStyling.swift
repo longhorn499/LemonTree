@@ -8,98 +8,150 @@
 
 #if canImport(UIKit)
 import UIKit
-import CommonMark
 
-// TODO: Good way 2 modify.. shared update etc
 struct LemonTreeStyling {
-    static var heading1Font: UIFont = UIFont.systemFont(ofSize: 28, weight: .bold)
-    static var heading1TextStyle: UIFont.TextStyle = .title1
-    static var heading1TextColor: UIColor = .label
+    let heading1Font: UIFont
+    let heading1TextStyle: UIFont.TextStyle
+    let heading1TextColor: UIColor
     
-    static var heading2Font: UIFont = UIFont.systemFont(ofSize: 22, weight: .bold)
-    static var heading2TextStyle: UIFont.TextStyle = .title2
-    static var heading2TextColor: UIColor = .label
+    let heading2Font: UIFont
+    let heading2TextStyle: UIFont.TextStyle
+    let heading2TextColor: UIColor
     
-    static var heading3Font: UIFont = UIFont.systemFont(ofSize: 20, weight: .bold)
-    static var heading3TextStyle: UIFont.TextStyle = .title3
-    static var heading3TextColor: UIColor = .label
+    let heading3Font: UIFont
+    let heading3TextStyle: UIFont.TextStyle
+    let heading3TextColor: UIColor
 
-    static var heading4Font: UIFont = UIFont.systemFont(ofSize: 17, weight: .bold)
-    static var heading4TextStyle: UIFont.TextStyle = .headline
-    static var heading4TextColor: UIColor = .label
+    let heading4Font: UIFont
+    let heading4TextStyle: UIFont.TextStyle
+    let heading4TextColor: UIColor
     
-    static var heading5Font: UIFont = UIFont.systemFont(ofSize: 15, weight: .bold)
-    static var heading5TextStyle: UIFont.TextStyle = .subheadline
-    static var heading5TextColor: UIColor = .label
+    let heading5Font: UIFont
+    let heading5TextStyle: UIFont.TextStyle
+    let heading5TextColor: UIColor
 
-    static var heading6Font: UIFont = UIFont.systemFont(ofSize: 13, weight: .bold)
-    static var heading6TextStyle: UIFont.TextStyle = .footnote
-    static var heading6TextColor: UIColor = .secondaryLabel
+    let heading6Font: UIFont
+    let heading6TextStyle: UIFont.TextStyle
+    let heading6TextColor: UIColor
     
-    static var bodyFont: UIFont = UIFont.systemFont(ofSize: 17, weight: .regular)
-    static var bodyTextStyle: UIFont.TextStyle = .body
-    static var bodyTextColor: UIColor = .label
+    let bodyFont: UIFont
+    let bodyTextStyle: UIFont.TextStyle
+    let bodyTextColor: UIColor
 
-    // TODO: need to inset a little bet, space between text and background
-    static var inlineCodeFont: UIFont = UIFont.monospacedSystemFont(ofSize: 15, weight: .light)
-    static var inlineCodeTextStyle: UIFont.TextStyle = .body
-    static var inlineCodeTextColor: UIColor = .systemGray3
-    static var inlineCodeBackgroundColor: UIColor = .systemGray6
+    // TODO: need to inset space between text and background
+    let inlineCodeFont: UIFont
+    let inlineCodeTextStyle: UIFont.TextStyle
+    let inlineCodeTextColor: UIColor
+    let inlineCodeBackgroundColor: UIColor
+
+    init(
+        heading1Font: UIFont = UIFont.systemFont(ofSize: 28, weight: .bold),
+        heading1TextStyle: UIFont.TextStyle = .title1,
+        heading1TextColor: UIColor = .label,
+        heading2Font: UIFont = UIFont.systemFont(ofSize: 22, weight: .bold),
+        heading2TextStyle: UIFont.TextStyle = .title2,
+        heading2TextColor: UIColor = .label,
+        heading3Font: UIFont = UIFont.systemFont(ofSize: 20, weight: .bold),
+        heading3TextStyle: UIFont.TextStyle = .title3,
+        heading3TextColor: UIColor = .label,
+        heading4Font: UIFont = UIFont.systemFont(ofSize: 17, weight: .bold),
+        heading4TextStyle: UIFont.TextStyle = .headline,
+        heading4TextColor: UIColor = .label,
+        heading5Font: UIFont = UIFont.systemFont(ofSize: 15, weight: .bold),
+        heading5TextStyle: UIFont.TextStyle = .subheadline,
+        heading5TextColor: UIColor = .label,
+        heading6Font: UIFont = UIFont.systemFont(ofSize: 13, weight: .bold),
+        heading6TextStyle: UIFont.TextStyle = .footnote,
+        heading6TextColor: UIColor = .secondaryLabel,
+        bodyFont: UIFont = UIFont.systemFont(ofSize: 17, weight: .regular),
+        bodyTextStyle: UIFont.TextStyle = .body,
+        bodyTextColor: UIColor = .label,
+        inlineCodeFont: UIFont = UIFont.monospacedSystemFont(ofSize: 15, weight: .light),
+        inlineCodeTextStyle: UIFont.TextStyle = .body,
+        inlineCodeTextColor: UIColor = .systemGray3,
+        inlineCodeBackgroundColor: UIColor = .systemGray6
+    ) {
+        self.heading1Font = heading1Font
+        self.heading1TextStyle = heading1TextStyle
+        self.heading1TextColor = heading1TextColor
+        self.heading2Font = heading2Font
+        self.heading2TextStyle = heading2TextStyle
+        self.heading2TextColor = heading2TextColor
+        self.heading3Font = heading3Font
+        self.heading3TextStyle = heading3TextStyle
+        self.heading3TextColor = heading3TextColor
+        self.heading4Font = heading4Font
+        self.heading4TextStyle = heading4TextStyle
+        self.heading4TextColor = heading4TextColor
+        self.heading5Font = heading5Font
+        self.heading5TextStyle = heading5TextStyle
+        self.heading5TextColor = heading5TextColor
+        self.heading6Font = heading6Font
+        self.heading6TextStyle = heading6TextStyle
+        self.heading6TextColor = heading6TextColor
+        self.bodyFont = bodyFont
+        self.bodyTextStyle = bodyTextStyle
+        self.bodyTextColor = bodyTextColor
+        self.inlineCodeFont = inlineCodeFont
+        self.inlineCodeTextStyle = inlineCodeTextStyle
+        self.inlineCodeTextColor = inlineCodeTextColor
+        self.inlineCodeBackgroundColor = inlineCodeBackgroundColor
+    }
 }
 
 extension LemonTreeStyling {
-    static func headingFont(for level: Int) -> UIFont {
+    func headingFont(for level: Int) -> UIFont {
         switch level {
         case 1:
-            return LemonTreeStyling.heading1Font
+            return heading1Font
         case 2:
-            return LemonTreeStyling.heading2Font
+            return heading2Font
         case 3:
-            return LemonTreeStyling.heading3Font
+            return heading3Font
         case 4:
-            return LemonTreeStyling.heading4Font
+            return heading4Font
         case 5:
-            return LemonTreeStyling.heading5Font
+            return heading5Font
         case 6:
-            return LemonTreeStyling.heading6Font
+            return heading6Font
         default:
             preconditionFailure()
         }
     }
 
-    static func headingTextStyle(for level: Int) -> UIFont.TextStyle {
+    func headingTextStyle(for level: Int) -> UIFont.TextStyle {
         switch level {
         case 1:
-            return LemonTreeStyling.heading1TextStyle
+            return heading1TextStyle
         case 2:
-            return LemonTreeStyling.heading2TextStyle
+            return heading2TextStyle
         case 3:
-            return LemonTreeStyling.heading3TextStyle
+            return heading3TextStyle
         case 4:
-            return LemonTreeStyling.heading4TextStyle
+            return heading4TextStyle
         case 5:
-            return LemonTreeStyling.heading5TextStyle
+            return heading5TextStyle
         case 6:
-            return LemonTreeStyling.heading6TextStyle
+            return heading6TextStyle
         default:
             preconditionFailure()
         }
     }
 
-    static func headingTextColor(for level: Int) -> UIColor {
+    func headingTextColor(for level: Int) -> UIColor {
         switch level {
         case 1:
-            return LemonTreeStyling.heading1TextColor
+            return heading1TextColor
         case 2:
-            return LemonTreeStyling.heading2TextColor
+            return heading2TextColor
         case 3:
-            return LemonTreeStyling.heading3TextColor
+            return heading3TextColor
         case 4:
-            return LemonTreeStyling.heading4TextColor
+            return heading4TextColor
         case 5:
-            return LemonTreeStyling.heading5TextColor
+            return heading5TextColor
         case 6:
-            return LemonTreeStyling.heading6TextColor
+            return heading6TextColor
         default:
             preconditionFailure()
         }

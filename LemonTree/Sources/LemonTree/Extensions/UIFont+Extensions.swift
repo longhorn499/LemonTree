@@ -8,7 +8,6 @@
 
 #if canImport(UIKit)
 import UIKit
-import CommonMark
 
 // MARK: - Add Traits
 

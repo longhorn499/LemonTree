@@ -2,7 +2,7 @@
 
 ![Screenshot](test)  
 
-## 🔥 🔥 🔥 _italic **italic and bold**_
+## 🔥 🔥 🔥 **bold and now *italic too!* now just bold**
 
 This is a re-creation of the Doom Fire effect for PSX using Fabien Sanglard's excellent article on how it was done: [HOW DOOM FIRE WAS **DONE**](http://fabiensanglard.net/doom_fire_psx/index.html)
 

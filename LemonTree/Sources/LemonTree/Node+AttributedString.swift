@@ -18,10 +18,10 @@ extension Node {
         attributes: [NSAttributedString.Key: Any],
         attachments: [String: NSTextAttachment] = [:],
         textStyle: UIFont.TextStyle,
-        position: Int = 0 // TODO: only for lists though, makes sense only in that context really
+        position: Int = 0,
+        styling: LemonTreeStyling
     ) -> NSAttributedString {
         let currentFont = attributes[.font] as? UIFont ?? UIFont.systemFont(ofSize: 17, weight: .regular)
-        // TODO: do like mattt, w/ protocol that these types conform to for rendering
         switch self {
         case let text as Text:
             return NSAttributedString(string: text.literal ?? "", attributes: attributes)
@@ -29,20 +29,40 @@ extension Node {
         case let emphasis as Emphasis:
             var attributes = attributes
             attributes[.font] = currentFont.italicFont(fontSize: currentFont.pointSize, textStyle: textStyle)
-            return emphasis.children.map { $0.attributedString(attributes: attributes, textStyle: textStyle) }.joined()
+            return emphasis.children.map {
+                $0.attributedString(
+                    attributes: attributes,
+                    textStyle: textStyle,
+                    styling: styling
+                )
+            }.joined()
 
         case let strong as Strong:
             var attributes = attributes
-            attributes[.font] = currentFont.boldFont(fontSize: currentFont.pointSize, textStyle: textStyle)
-            return strong.children.map { $0.attributedString(attributes: attributes, textStyle: textStyle) }.joined()
+            attributes[.font] = currentFont.boldFont(
+                fontSize: currentFont.pointSize,
+                textStyle: textStyle
+            )
+            return strong.children.map {
+                $0.attributedString(
+                    attributes: attributes,
+                    textStyle: textStyle,
+                    styling: styling
+                )
+            }.joined()
 
         case let link as Link:
             var attributes = attributes
             if let urlString = link.urlString, let url = URL(string: urlString) {
                 attributes[.link] = url
             }
-            // TODO: NEXT Tapping link not working
-            return link.children.map { $0.attributedString(attributes: attributes, textStyle: textStyle) }.joined()
+            return link.children.map {
+                $0.attributedString(
+                    attributes: attributes,
+                    textStyle: textStyle,
+                    styling: styling
+                )
+            }.joined()
 
         case let image as Image:
             // TODO: Add support for remote images/gifs
@@ -62,9 +82,9 @@ extension Node {
 
         case let code as Code:
             var attributes = attributes
-            attributes[.font] = LemonTreeStyling.inlineCodeFont.scaledFont(for: LemonTreeStyling.inlineCodeTextStyle)
-            attributes[.backgroundColor] = LemonTreeStyling.inlineCodeBackgroundColor
-            attributes[.foregroundColor] = LemonTreeStyling.inlineCodeTextColor
+            attributes[.font] = styling.inlineCodeFont.scaledFont(for: styling.inlineCodeTextStyle)
+            attributes[.backgroundColor] = styling.inlineCodeBackgroundColor
+            attributes[.foregroundColor] = styling.inlineCodeTextColor
             return NSAttributedString(string: code.literal ?? "", attributes: attributes)
 
         case let item as List.Item:
@@ -72,12 +92,24 @@ extension Node {
             let delimiter: String = list.kind == .ordered ? "\(position)." : "•"
             let indentation = String(repeating: "\t", count: list.nestingLevel)
             let mutableAttributedString = NSMutableAttributedString(string: indentation + delimiter + " ", attributes: attributes)
-            let attributedString = item.children.map { $0.attributedString(attributes: attributes, textStyle: textStyle) }.joined()
+            let attributedString = item.children.map {
+                $0.attributedString(
+                    attributes: attributes,
+                    textStyle: textStyle,
+                    styling: styling
+                )
+            }.joined()
             mutableAttributedString.append(attributedString)
             return mutableAttributedString
 
         case let paragraph as Paragraph:
-            return paragraph.children.map { $0.attributedString(attributes: attributes, textStyle: textStyle) }.joined()
+            return paragraph.children.map {
+                $0.attributedString(
+                    attributes: attributes,
+                    textStyle: textStyle,
+                    styling: styling
+                )
+            }.joined()
 
         default:
             return NSAttributedString(string: "Unhandled: \(self.description)")
