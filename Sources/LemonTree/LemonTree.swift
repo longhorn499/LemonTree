@@ -10,7 +10,7 @@
 import UIKit
 import CommonMark
 
-class LemonTree {
+public class LemonTree {
     static func generateView(
         for document: Document,
         styling: LemonTreeStyling = LemonTreeStyling(),

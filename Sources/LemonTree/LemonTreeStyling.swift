@@ -9,7 +9,7 @@
 #if canImport(UIKit)
 import UIKit
 
-struct LemonTreeStyling {
+public struct LemonTreeStyling {
     let heading1Font: UIFont
     let heading1TextStyle: UIFont.TextStyle
     let heading1TextColor: UIColor
@@ -99,7 +99,7 @@ struct LemonTreeStyling {
     }
 }
 
-extension LemonTreeStyling {
+public extension LemonTreeStyling {
     func headingFont(for level: Int) -> UIFont {
         switch level {
         case 1:

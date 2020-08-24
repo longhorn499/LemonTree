@@ -13,7 +13,7 @@ import CommonMark
 // https://github.com/mattt/CommonMarkAttributedString/blob/master/Sources/CommonMarkAttributedString/CommonMark%2BExtensions.swift
 // not adding directly b/c implementation for images/gifs will probably change (perhaps fork)
 
-extension Node {
+public extension Node {
     func attributedString(
         attributes: [NSAttributedString.Key: Any],
         attachments: [String: NSTextAttachment] = [:],
