@@ -10,7 +10,7 @@
 import UIKit
 import CommonMark
 
-public protocol LemonTreeViewRenderable {
+protocol LemonTreeViewRenderable {
     func markdownViews(styling: LemonTreeStyling) -> [UIView]
 }
 
@@ -29,7 +29,7 @@ func defaultTextView() -> UITextView {
 // MARK: - Heading
 
 extension Heading: LemonTreeViewRenderable {
-    public func markdownViews(styling: LemonTreeStyling) -> [UIView] {
+    func markdownViews(styling: LemonTreeStyling) -> [UIView] {
         let stackView = UIStackView()
         stackView.spacing = UIStackView.spacingUseSystem
         stackView.axis = .horizontal
@@ -71,7 +71,7 @@ extension Heading: LemonTreeViewRenderable {
 // MARK: - Paragraph
 
 extension Paragraph: LemonTreeViewRenderable {
-    public func markdownViews(styling: LemonTreeStyling) -> [UIView] {
+    func markdownViews(styling: LemonTreeStyling) -> [UIView] {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = UIStackView.spacingUseSystem
@@ -96,7 +96,7 @@ extension Paragraph: LemonTreeViewRenderable {
 // MARK: - List
 
 extension List: LemonTreeViewRenderable {
-    public func markdownViews(styling: LemonTreeStyling) -> [UIView] {
+    func markdownViews(styling: LemonTreeStyling) -> [UIView] {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = UIStackView.spacingUseDefault
@@ -122,7 +122,7 @@ extension List: LemonTreeViewRenderable {
 // MARK: - BlockQuote
 
 extension BlockQuote: LemonTreeViewRenderable {
-    public func markdownViews(styling: LemonTreeStyling) -> [UIView] {
+    func markdownViews(styling: LemonTreeStyling) -> [UIView] {
         // TODO: Next up
         return []
     }

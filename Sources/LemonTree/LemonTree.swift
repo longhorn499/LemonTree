@@ -11,11 +11,12 @@ import UIKit
 import CommonMark
 
 public class LemonTree {
-    static func generateView(
-        for document: Document,
+    public static func generateView(
+        for string: String,
         styling: LemonTreeStyling = LemonTreeStyling(),
         layoutMargins: UIEdgeInsets = .init(top: 20, left: 20, bottom: 20, right: 20)
     ) throws -> UIView {
+        let document = try Document(string)
         let main = UIStackView()
         main.axis = .vertical
         main.backgroundColor = .systemFill

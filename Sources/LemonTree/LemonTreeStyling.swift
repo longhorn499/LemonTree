@@ -44,7 +44,7 @@ public struct LemonTreeStyling {
     let inlineCodeTextColor: UIColor
     let inlineCodeBackgroundColor: UIColor
 
-    init(
+    public init(
         heading1Font: UIFont = UIFont.systemFont(ofSize: 28, weight: .bold),
         heading1TextStyle: UIFont.TextStyle = .title1,
         heading1TextColor: UIColor = .label,

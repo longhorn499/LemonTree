@@ -20,8 +20,7 @@ class ViewController: UIViewController {
             let url = Bundle.main.url(forResource: "test", withExtension: "md")!
             let data = try Data(contentsOf: url)
             let string = String(data: data, encoding: .utf8) ?? "missing"
-            let document = try Document(string)
-            let lemonView: UIView = try LemonTree.generateView(for: document, styling: LemonTreeStyling())
+            let lemonView: UIView = try LemonTree.generateView(for: string, styling: LemonTreeStyling())
             lemonView.translatesAutoresizingMaskIntoConstraints = false
             contentView.addSubview(lemonView)
             NSLayoutConstraint.activate([
