@@ -110,7 +110,7 @@ extension Node {
                     styling: styling
                 )
             }.joined()
-
+            
         default:
             return NSAttributedString(string: "Unhandled: \(self.description)")
         }

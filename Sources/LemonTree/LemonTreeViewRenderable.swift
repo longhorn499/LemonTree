@@ -118,4 +118,13 @@ extension List: LemonTreeViewRenderable {
     }
 }
 
+// MARK: - BlockQuote
+
+extension BlockQuote: LemonTreeViewRenderable {
+    func markdownViews(styling: LemonTreeStyling) -> [UIView] {
+        // TODO: Next up
+        return []
+    }
+}
+
 #endif

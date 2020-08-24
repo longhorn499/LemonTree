@@ -11,4 +11,4 @@ On using bitmaps to render to `UIImage` - these two references were extremely he
 2. [Swiftenstein](https://github.com/nicklockwood/Swiftenstein)
 2. Three
 2. Four
-2. Five
+> Five
