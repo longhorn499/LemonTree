@@ -57,4 +57,4 @@ Use the URL from this repository to add using [Swift Package Manager](https://sw
 
 [CommonMarkAttributedString](https://github.com/mattt/CommonMarkAttributedString) - the logic for generating attributed strings for nodes (especially this [file](https://github.com/mattt/CommonMarkAttributedString/blob/master/Sources/CommonMarkAttributedString/CommonMark%2BExtensions.swift))
 
-[Parma](https://github.com/dasautoooo/Parma) - thank you for the inspo. I thought this was a fun/maybe good idea but got hung up trying to do some of the work unrelated to the final step.
+[Parma](https://github.com/dasautoooo/Parma) - thank you for the inspo. I thought this was a fun/maybe good idea but got hung up trying to do some of the work unrelated to the final step
