@@ -1,6 +1,6 @@
 # LemonTree
 
-Display Markdown using `UIKit` 🍋
+Display Markdown using UIKit 🍋
 
 # WHY?
 
@@ -29,11 +29,6 @@ By using `UIStackView` to build a Markdown view, there are situations where you 
 - [x] Ordered Lists
 - [x] Images (local)
 
-### Platforms
-
-- [x] iOS 13.0+
-- [ ] macOS
-
 ## Next
 
 - [ ] Block quotes
@@ -46,6 +41,11 @@ By using `UIStackView` to build a Markdown view, there are situations where you 
 - [ ] HTML
 
 .. and a few more that aren't listed
+
+# Platforms
+
+- [x] iOS 13.0+
+- [ ] macOS
 
 # Installation
 
