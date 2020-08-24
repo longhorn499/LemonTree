@@ -21,7 +21,8 @@ let package = Package(
         .target(
             name: "LemonTree",
             dependencies: ["CommonMark"],
-            path: "./Sources"
+            path: "./Sources",
+            exclude: ["Example"]
         ),
         .testTarget(
             name: "LemonTreeTests",
