@@ -6,7 +6,9 @@
 //  Copyright © 2020 Kevin Johnson. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
+import CommonMark
 
 // MARK: - Add Traits
 
@@ -41,3 +43,5 @@ extension UIFont.TextStyle {
         return UIFontMetrics(forTextStyle: self)
     }
 }
+
+#endif

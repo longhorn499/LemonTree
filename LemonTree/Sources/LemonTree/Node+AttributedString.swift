@@ -6,6 +6,7 @@
 //  Copyright © 2020 Kevin Johnson. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 import CommonMark
 
@@ -89,3 +90,5 @@ extension List {
         sequence(first: self) { $0.parent }.map { ($0 is List) ? 1 : 0}.reduce(0, +)
     }
 }
+
+#endif

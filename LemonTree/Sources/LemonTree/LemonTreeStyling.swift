@@ -5,7 +5,10 @@
 //  Created by Kevin Johnson on 8/21/20.
 //  Copyright © 2020 Kevin Johnson. All rights reserved.
 //
+
+#if canImport(UIKit)
 import UIKit
+import CommonMark
 
 // TODO: Good way 2 modify.. shared update etc
 struct LemonTreeStyling {
@@ -102,3 +105,5 @@ extension LemonTreeStyling {
         }
     }
 }
+
+#endif
