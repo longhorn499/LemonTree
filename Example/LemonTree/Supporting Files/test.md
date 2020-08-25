@@ -8,7 +8,7 @@
 
 ## Emphasis
 
-*This text will be italic*  
+*This text will be italic* 
 _This will also be italic_
 
 **This text will be bold**  
@@ -32,6 +32,8 @@ _You **can** combine them_
 1. Item 3
    1. Item 3a
    1. Item 3b
+        1. Item 3bb
+1. Item 4
 
 ## Images
 

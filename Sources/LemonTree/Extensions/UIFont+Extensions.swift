@@ -21,7 +21,8 @@ extension UIFont {
     }
     
     func addingSymbolicTraits(_ traits: UIFontDescriptor.SymbolicTraits, textStyle: UIFont.TextStyle) -> UIFont? {
-        let newTraits = fontDescriptor.symbolicTraits.union(traits)
+        var newTraits = fontDescriptor.symbolicTraits.union(traits)
+        newTraits.insert(.traitLooseLeading) // can come from md doc? loose or not..
         guard let descriptor = fontDescriptor.withSymbolicTraits(newTraits) else {
             return nil
         }

@@ -13,6 +13,16 @@ import CommonMark
 // https://github.com/mattt/CommonMarkAttributedString/blob/master/Sources/CommonMarkAttributedString/CommonMark%2BExtensions.swift
 // not adding directly b/c implementation for images/gifs will probably change (perhaps fork)
 
+protocol AttributedStringRenderable {
+    func attributedString(
+        attributes: [NSAttributedString.Key: Any],
+        attachments: [String: NSTextAttachment],
+        textStyle: UIFont.TextStyle,
+        position: Int,
+        styling: LemonTreeStyling
+    ) -> NSAttributedString
+}
+
 public extension Node {
     func attributedString(
         attributes: [NSAttributedString.Key: Any],
@@ -87,20 +97,51 @@ public extension Node {
             attributes[.foregroundColor] = styling.inlineCodeTextColor
             return NSAttributedString(string: code.literal ?? "", attributes: attributes)
 
+        case let list as List:
+            //            list.markdownViews(styling: styling)
+            let mutable = NSMutableAttributedString(string: "\u{2028}", attributes: attributes)
+            let attr = list.children.enumerated().map {
+                $0.element.attributedString(
+                    attributes: attributes,
+                    textStyle: textStyle,
+                    position: $0.offset + 1,
+                    styling: styling
+                )
+            }.joined()
+            mutable.append(attr)
+            return mutable
+
         case let item as List.Item:
             let list = item.parent as! List
-            let delimiter: String = list.kind == .ordered ? "\(position)." : "•"
             let indentation = String(repeating: "\t", count: list.nestingLevel)
-            let mutableAttributedString = NSMutableAttributedString(string: indentation + delimiter + " ", attributes: attributes)
-            let attributedString = item.children.map {
+            let delimiter: String
+            switch list.nestingLevel {
+            case 1:
+                delimiter = list.kind == .ordered ? "\(position)." : "•"
+            case 2:
+                // roman numerals, white circle
+                // TODO: roman numberal func..
+                delimiter = list.kind == .ordered ? "i." : "◦"
+            default:
+                // alphabet, squares
+                // TODO: alphabet func..
+                delimiter = list.kind == .ordered ? "a." : "■"
+            }
+            let mutable: NSMutableAttributedString
+            if position == 1 {
+                mutable = NSMutableAttributedString(string: "\(indentation)\(delimiter) ", attributes: attributes)
+            } else {
+                mutable = NSMutableAttributedString(string: "\u{2028}\(indentation)\(delimiter) ", attributes: attributes)
+            }
+            let attr = item.children.map {
                 $0.attributedString(
                     attributes: attributes,
                     textStyle: textStyle,
                     styling: styling
                 )
             }.joined()
-            mutableAttributedString.append(attributedString)
-            return mutableAttributedString
+            mutable.append(attr)
+            return mutable
 
         case let paragraph as Paragraph:
             return paragraph.children.map {
@@ -110,7 +151,13 @@ public extension Node {
                     styling: styling
                 )
             }.joined()
-            
+
+        case is SoftLineBreak:
+            return NSAttributedString(string: "\u{2028}", attributes: attributes) // line separator
+
+        case is HardLineBreak, is ThematicBreak:
+            return NSAttributedString(string: "\u{2029}", attributes: attributes) // paragraph separator
+
         default:
             return NSAttributedString(string: "Unhandled: \(self.description)")
         }
@@ -120,6 +167,13 @@ public extension Node {
 extension List {
     fileprivate var nestingLevel: Int {
         sequence(first: self) { $0.parent }.map { ($0 is List) ? 1 : 0}.reduce(0, +)
+    }
+}
+
+///
+extension BlockQuote {
+    fileprivate var nestingLevel: Int {
+        sequence(first: self) { $0.parent }.map { ($0 is BlockQuote) ? 1 : 0}.reduce(0, +)
     }
 }
 

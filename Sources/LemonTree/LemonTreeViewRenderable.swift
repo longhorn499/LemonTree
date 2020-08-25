@@ -14,13 +14,11 @@ protocol LemonTreeViewRenderable {
     func markdownViews(styling: LemonTreeStyling) -> [UIView]
 }
 
-/// move
 func defaultTextView() -> UITextView {
     let textView = UITextView()
     textView.isScrollEnabled = false
     textView.isEditable = false
     textView.adjustsFontForContentSizeCategory = true
-    // label.numberOfLines = 0
     textView.textAlignment = .left
     textView.textContainerInset = .zero
     return textView
@@ -101,20 +99,19 @@ extension List: LemonTreeViewRenderable {
         stackView.axis = .vertical
         stackView.spacing = UIStackView.spacingUseDefault
 
-        for (index, child) in children.enumerated() {
-            let textView = defaultTextView()
-            let attrString = child.attributedString(
-                attributes: [
-                    .font: styling.bodyFont.scaledFont(for: styling.bodyTextStyle),
-                    .foregroundColor: styling.bodyTextColor
+        let textView = defaultTextView()
+        let attrString = children.enumerated().map {
+            $0.element.attributedString(attributes: [
+                .font: styling.bodyFont.scaledFont(for: styling.bodyTextStyle),
+                .foregroundColor: styling.bodyTextColor
                 ],
-                textStyle: styling.bodyTextStyle,
-                position: index + 1,
-                styling: styling
+                                        textStyle: styling.bodyTextStyle,
+                                        position: $0.offset + 1,
+                                        styling: styling
             )
-            textView.attributedText = attrString
-            stackView.addArrangedSubview(textView)
-        }
+        }.joined()
+        textView.attributedText = attrString
+        stackView.addArrangedSubview(textView)
         return [stackView]
     }
 }
@@ -124,6 +121,7 @@ extension List: LemonTreeViewRenderable {
 extension BlockQuote: LemonTreeViewRenderable {
     func markdownViews(styling: LemonTreeStyling) -> [UIView] {
         // TODO: Next up
+        print("BlockQuote")
         return []
     }
 }
