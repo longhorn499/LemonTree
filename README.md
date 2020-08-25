@@ -12,9 +12,8 @@ By using `UIStackView` to build a Markdown view, there are situations where you 
 
 ```swift
   let string = "I am some **Markdown** _text_ right here"
-  let document = try Document(string)
-  let styling = LemonTreeStyling() // configurable
-  let lemonView: UIView = try LemonTree.generateView(for: document, styling: styling)
+  let lemonView: UIView = try! LemonTree.generateView(for: string)
+  lemonView.translatesAutoresizingMaskIntoConstraints = false
 ```
 
 # Markdown
